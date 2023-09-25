@@ -1,54 +1,55 @@
-const string = 'test education part 2'
 const generateCode = (min, max) => Math.trunc(min + Math.random() * (max - min))
 
-function giveUniqueChar(fragment) {
-    let listSymbols = []
-    for (let i = 0; i < fragment.length; i++) {
-        listSymbols.push(fragment[i])
-    }
-    let randomSymbol = listSymbols[0]
+const giveUniqueChar = (string) => {
+    const listCodes = [];
+    let resultChar = '';
 
-    while (randomSymbol == listSymbols[0] || randomSymbol == listSymbols[2]) {
-        const randomCode = generateCode(32, 126)
-        randomSymbol = String.fromCharCode(randomCode)
+    for (let i = 0; i < string.length; i++) {
+        listCodes.push(string[i].charCodeAt(0));
     }
-    return randomSymbol
+
+    const uniqueListCodes = new Set(listCodes);
+    const randomCode = generateCode(32, 126);
+
+    while (resultChar.length === 0) {
+        let isExist = false;
+
+        uniqueListCodes.forEach((code) => {
+            if (randomCode === code) {
+                isExist = true;
+                return;
+            }
+        })
+
+        if (!isExist) {
+            resultChar = String.fromCharCode(randomCode);
+        }
+    }
+
+    return resultChar;
 }
 
-function sortObjects(arrObj) {
-    for (let i = 0; i < arrObj.length; i++) {
-        for (let j = 0; j < arrObj.length - i - 1; j++) {
-            if (arrObj[j].sumCode > arrObj[j + 1].sumCode) {
-                const tmp = arrObj[j + 1]
-                arrObj[j + 1] = arrObj[j]
-                arrObj[j] = tmp
+const giveFragments = (string) => {
+    let finalArray = [];
+    const randomSymbol = giveUniqueChar(string);
+    for (let i = 0; i < string.length; i += 3) { //by fragments
+        let fragment = [];
+
+        for (let j = i; j < i + 3; j++) {
+            if (j === i + 1) { //if middle symbol
+                fragment.push(randomSymbol);
+            }
+            else {
+                fragment.push(string[j]);
             }
         }
+
+        finalArray.push(fragment.join(''));
     }
-    return arrObj
+
+    return finalArray.sort();
 }
 
-function giveFragments(string) {
-    let finalArray = []
+const string = 'test education part 2';
 
-    for (let i = 0; i < string.length; i += 3) { //by fragments
-        let fragment = ''
-        let sumCodeSymbols = 0
-        for (let j = i; j < i + 3; j++) {
-            fragment += string[j]
-        }
-        let stringArray = fragment.split('')
-        stringArray[1] = giveUniqueChar(fragment)
-
-        stringArray.forEach((value) => {
-            sumCodeSymbols += value.charCodeAt(0)
-        })
-        finalArray.push({
-            fragment: stringArray.join(''),
-            sumCode: sumCodeSymbols
-        })
-
-    }
-    return sortObjects(finalArray)
-}
 console.log(giveFragments(string));
