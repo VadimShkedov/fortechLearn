@@ -2,14 +2,15 @@ const removeDuplicates = arr => { //возвращает уникальные э
     let resultArr = []
     for (let i = 0; i < arr.length; i++) {
         let isExist = false
+        const stringValue = arr[i].toString()
         for (let j = 0; j < resultArr.length; j++) {
-            if (resultArr[j] == arr[i].toLowerCase()) {
+            if (resultArr[j] == stringValue.toLowerCase()) {
                 isExist = true
                 break
             }
         }
         if (!isExist) {
-            resultArr.push(arr[i])
+            resultArr.push(stringValue.toLowerCase())
         }
     }
     return resultArr
