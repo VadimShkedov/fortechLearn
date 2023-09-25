@@ -5,7 +5,7 @@ const removeDuplicates = (arr) => { //возвращает уникальные 
     const stringValue = arr[i].toString();
 
     for (let j = 0; j < resultArr.length; j++) {
-      if (resultArr[j] == stringValue.toLowerCase()) {
+      if (resultArr[j] === stringValue.toLowerCase()) {
         isExist = true;
         break;
       }
