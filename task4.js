@@ -1,17 +1,19 @@
-function range(start, stop, step = 1) {
-    const finalArray = []
+const makeArray = (start, stop, step = 1) => {
+    const finalArray = [];
 
-    if (start < stop) {
+    if (start < stop && step > 0) {
         for (let i = start; i <= stop; i+=step) {
-            finalArray.push(i)
+            finalArray.push(i);
         }
     }
-    else {
+
+    else if (start >= stop && step < 0) {
         for (let i = start; i >= stop; i+=step) {
-            finalArray.push(i)
+            finalArray.push(i);
         }
     }
-    return finalArray
+
+    return finalArray;
 }
 
-console.log(range(5, 2, -1));
+console.log(makeArray(5, 2, -1));
