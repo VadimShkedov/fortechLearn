@@ -1,21 +1,23 @@
-const arr = [
+const objects = [
     { name: 'test', age: 34, country: 'RF' },
     { name: 'test2', age: 12, country: 'RF' },
     { name: 'test1', age: 54, country: 'RF' }
 ];
 
-function func(arr, equals, biggest) {
-    let finalArray = []
+const filtringCollection = (array, equals, biggest) => {
+    let finalArray = [];
 
-    arr.forEach((object) => {
+    array.forEach((object) => {
         const values = []
         for (let key in object) {
-            values.push(object[key])
+            values.push(object[key]);
         }
+        
         if (values.includes(equals) && values.find(value => value > biggest)) {
-            finalArray.push(object)
+            finalArray.push(object);
         }
     })
-    return finalArray
+    return finalArray;
 }
-console.log(func(arr, 'RF', 18));
+
+console.log(filtringCollection(objects, 'RF', 18));
