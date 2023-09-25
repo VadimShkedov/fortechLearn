@@ -1,18 +1,19 @@
-function notExistInSecond(array1, array2) {
-    let finalArray = []
+const existInFirst = (array1, array2) => {
+    let finalArray = [];
 
     for (let i = 0; i < array1.length; i++) {
-        let isExist = false
+        let isNumExist = false;
         for (let j = 0; j < array2.length; j++) {
             if (array1[i] == array2[j]) {
-                isExist = true
-                break
+                isNumExist = true;
+                break;
             }
         }
-        if (!isExist) {
-            finalArray.push(array1[i])
+        if (!isNumExist) {
+            finalArray.push(array1[i]);
         }
     }
-    return finalArray
+    return finalArray;
 }
-console.log(notExistInSecond([4, 7, 2, 9, 3, 5, 6, 4, 5, 1, 4], [4, 5, 6, 7, 8]));
+
+console.log(existInFirst([4, 7, 2, 9, 3, 5, 6, 4, 5, 1, 4], [4, 5, 6, 7, 8]));
