@@ -11,18 +11,20 @@ const getMaxMinString = (string1, string2) => {
     }
 }
 
-function searchSubstring(string1, string2) {
-    let isExist = false
-    const { minStr, maxStr } = getMaxMinString(string1, string2)
+const searchingSubstring = (string1, string2) => {
+    let isStringExist = false;
+    const { minStr, maxStr } = getMaxMinString(string1, string2);
 
     for (let i = 0; i < maxStr.length; i++) {
-        const sliceStr = maxStr.slice(i, i + minStr.length)
+        const sliceStr = maxStr.slice(i, i + minStr.length);
         if (sliceStr == minStr) {
-            isExist = true
-            break
+            isStringExist = true;
+            break;
         }
     }
-    return isExist
+    return isStringExist;
 }
+
 console.log(searchSubstring('text education part 2', 'text'));
+
 console.log(searchSubstring('text education part 2', 'test'));
