@@ -4,7 +4,7 @@ const objects = [
     { name: 'test1', age: 54, country: 'RF' }
 ];
 
-const filtringCollection = (array, equals, biggest) => {
+const filtringCollection = (array, equalTo, moreThan) => {
     let finalArray = [];
 
     array.forEach((object) => {
@@ -13,7 +13,7 @@ const filtringCollection = (array, equals, biggest) => {
             values.push(object[key]);
         }
         
-        if (values.includes(equals) && values.find(value => value > biggest)) {
+        if (values.includes(equalTo) && values.find(value => value > moreThan)) {
             finalArray.push(object);
         }
     })
