@@ -1,9 +1,11 @@
 const makeArrayPair = (obj) => {
-    let finalArray = [];
-    for (let key in obj) {
-        finalArray.push([key, obj[key]]);
-    }
-    return finalArray;
+  const pairArray = [];
+
+  for (let key in obj) {
+    pairArray.push([key, obj[key]]);
+  }
+
+  return pairArray;
 }
 
 console.log(makeArrayPair({ 'dog': 6, 'cat': 11 }));
