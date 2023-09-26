@@ -1,3 +1,8 @@
+* {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   width: max-content;
   height: max-content;
@@ -20,7 +25,6 @@
 .container__line {
   top: 45%;
   height: 5px;
-  width: 90%;
   background-color: rgb(196, 196, 196);
   position: absolute;
 }
@@ -36,4 +40,5 @@
 .container__stage_grey {
   background-color: rgb(196, 196, 196);
   color: black;
+  margin: 0;
 }
