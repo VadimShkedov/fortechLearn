@@ -1,0 +1,17 @@
+.container {
+  width: 50%;
+  height: 20px;
+  background: linear-gradient(black, rgb(158, 158, 158));
+  border: 2px solid black;
+  border-radius: 20px
+}
+
+.container__scale {
+  width: 50%;
+  height: 20px;
+  background: linear-gradient(rgb(187, 205, 255), rgb(106, 145, 255), rgb(187, 205, 255));
+  border: 1px solid blue;
+  box-sizing: border-box;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 3px 2px 5px 0px black;
+}
