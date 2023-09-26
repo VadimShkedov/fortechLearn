@@ -2,96 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            margin: 0;
-        }
-
-        .container {
-            top: 200px;
-            height: 150px;
-            position: relative;
-            display: flex;
-            font-size:large
-        }
-
-        .container__button {
-            background-color: rgb(255, 233, 107);
-            writing-mode: vertical-lr;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            width: 20px;
-            height: 100%;
-            text-align: center;
-            transform: rotate(180deg);
-            animation-name: close-container;
-        }
-
-        .container__content img {
-            padding-left: 10px;
-        }
-
-        .container__content {
-            color: white;
-            display: inline-block;
-            transform: rotate(180deg);
-            width: 400px;
-            height: 100%;
-            background-color: rgb(70, 70, 70);
-            animation-name: close-container;
-        }
-
-        .container__text-content {
-            display: flex;
-            width: 50%;
-            height: 100%;
-            text-align: center;
-            writing-mode: lr;
-            align-items: center;
-        }
-
-        .container__button:hover, .container__button {
-            animation-duration: 0.5s;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
-            animation-fill-mode: forwards;
-        }
-
-        .container__button:hover {
-            animation-name: button-to-block;
-        }
-
-        @keyframes button-to-block {
-            to {
-                width: 400px;
-            }
-        }
-        @keyframes close-container {
-            from {
-                width: 400px;
-            }
-            to {
-                width: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="container__button">
-            <span>Обратная связь</span>
-            <div class="container__content">
-                <img src="image.jpg" height="150px">
-                <div class="container__text-content">
-                    <p>Если у вас возникли какие что вопросы по этому коду</p>
-                </div>
-            </div>
+  <div class="container">
+    <div class="container__button">
+      <span>Обратная связь</span>
+      <div class="container__content">
+        <img src="image.jpg" height="150px">
+        <div class="container__text-content">
+          <p>Если у вас возникли какие то вопросы по этому коду</p>
         </div>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
