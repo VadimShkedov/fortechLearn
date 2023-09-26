@@ -1,26 +1,25 @@
 const text1 = 'text education part 2';
-const text2 = 'text education';
+const text2 = 'education department fortech';
 
-const diffSymbols = (str1, str2) => {
+const giveDiffSymbols = (str1, str2) => {
     let resultStr = ''
     let maxStr = ''
-    let needIndex = 0
+    let minStr = ''
 
     if (str1.length > str2.length) {
         maxStr = str1
+        minStr = str2
     }
     else {
         maxStr = str2
+        minStr = str1
     }
-    for (let i = 0; i < maxStr.length; i++) {
-        if (str1[i] != str2[i]) {
-            needIndex = i
-            break
-        }
-    }
-    for (let i = needIndex; i < maxStr.length; i++) {
+
+    for (let i = minStr.length; i < maxStr.length; i++) {
         resultStr += maxStr[i]
     }
+
     return resultStr
 }
-console.log(diffSymbols(text1, text2));
+
+console.log(giveDiffSymbols(text1, text2));
