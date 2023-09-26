@@ -1,24 +1,20 @@
-const input = [5, 2, 8, 4, 8, 2, 5, 8, 2, 17, 8, 4, 2, 4, 7, 3];
+const array = [5, 2, 8, 4, 8, 2, 5, 8, 2, 17, 8, 4, 2, 4, 7, 3];
 
-const sortAndSet = (array) => {
-    let countNums = {};
-    let finalArray = [];
-    let sortedArray = array.sort((a, b) => a - b);
+const sortAndSetArray = (array) => {
+  const countNums = {};
+  const finalArray = [];
 
-    for (let elem of sortedArray) {
-        if (!countNums[elem]) {
-            countNums[elem] = 1;
-        }
-        else {
-            countNums[elem] += 1;
-        }
+  for (let elem of array) {
+    (!countNums[elem]) ? countNums[elem] = 1 : countNums[elem] += 1
+  }
+  
+  for (let key in countNums) {
+    if (countNums[key] === 1) {
+      finalArray.push(key);
     }
-    for (let key in countNums) {
-        if (countNums[key] == 1) {
-            finalArray.push(parseInt(key));
-        }
-    }
-    return finalArray;
+  }
+
+  return finalArray.sort((a, b) => a - b);
 }
 
-console.log(sortAndSet(input));
+console.log(sortAndSetArray(array));
