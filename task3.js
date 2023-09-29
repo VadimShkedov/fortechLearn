@@ -1,21 +1,13 @@
-const removeDuplicates = (arr) => { //возвращает уникальные элементы в массиве
-  let resultArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    let isExist = false;
-    const stringValue = arr[i].toString();
+const removeDuplicates = (array) => { //возвращает уникальные элементы в массиве
+  const resultObj = {};
 
-    for (let j = 0; j < resultArr.length; j++) {
-      if (resultArr[j] === stringValue.toLowerCase()) {
-        isExist = true;
-        break;
-      }
-    }
+  for (const value of array) {
+    const key = (typeof value === 'string') ? value.toLowerCase() : value;
 
-    if (!isExist) {
-      resultArr.push(stringValue.toLowerCase());
-    }
+    isNaN(resultObj[key]) ? resultObj[key] = 1 : resultObj[key]++;
   }
-  return resultArr;
+
+  return resultObj;
 }
 
-console.log(removeDuplicates(['text', 'education', 'part', 'Text']));
+console.log(removeDuplicates([true, 'education', 'part', true]));
