@@ -9,8 +9,7 @@ const giveDiffSymbols = (str1, str2) => {
     if (str1.length > str2.length) {
         maxStr = str1
         minStr = str2
-    }
-    else {
+    } else {
         maxStr = str2
         minStr = str1
     }
