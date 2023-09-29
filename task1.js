@@ -18,7 +18,7 @@ const giveDiffSymbols = (str1, str2) => {
         resultStr += maxStr[i]
     }
 
-    return resultStr
+    return resultStr;
 }
 
 console.log(giveDiffSymbols(text1, text2));
