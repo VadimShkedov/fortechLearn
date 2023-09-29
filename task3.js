@@ -3,7 +3,6 @@ const removeDuplicates = (array) => { //возвращает уникальны�
 
   for (const value of array) {
     const key = (typeof value === 'string') ? value.toLowerCase() : value;
-
     isNaN(resultObj[key]) ? resultObj[key] = 1 : resultObj[key]++;
   }
 
