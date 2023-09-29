@@ -1,16 +1,14 @@
-const array1 = [3, 6, 1, 8, 3, 6, 3, 6, 3, 6]
-const array2 = [1, 4, 2, 4]
-const array3 = [6, 3, 2, 8, 1]
+const array1 = [3, 6, 1, 8, 3, 6, 3, 6, 3, 6];
+const array2 = [1, 4, 2, 4];
+const array3 = [6, 3, 2, 8, 1];
 
-const giveUniqueElements = (mainArray, ...arrs) => { //возвращает уникальные элементы в нескольких массивах
-  const uniqueAnotherArrays = [];
-
-  arrs.forEach((value) => uniqueAnotherArrays.push(new Set(value)));
-  let finalArray = [];
+const giveUniqueElements = (mainArray, ...arrays) => { //возвращает уникальные элементы в нескольких массивах
+  const finalArray = [];
 
   mainArray.forEach((valueMainArray) => {
     let countRepeatElements = 0;
-    for (let anotherArray of uniqueAnotherArrays) {
+
+    for (let anotherArray of arrays) {
       anotherArray.forEach((valueAnotherArray) => {
         if (valueAnotherArray === valueMainArray) {
           countRepeatElements++;
@@ -18,10 +16,11 @@ const giveUniqueElements = (mainArray, ...arrs) => { //возвращает ун
       })
     }
 
-    if (countRepeatElements === uniqueAnotherArrays.length) {
+    if (countRepeatElements >= arrays.length) {
       finalArray.push(valueMainArray);
     }
   })
+
   return finalArray;
 }
 
