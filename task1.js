@@ -1,7 +1,7 @@
 const text1 = 'text education part 2';
 const text2 = 'education department fortech';
 
-const giveDiffSymbols = (str1, str2) => { //task1
+const giveDiffSymbols = (str1, str2) => {
     let resultStr = '';
     let maxStr = '';
     let minStr = '';
