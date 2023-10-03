@@ -1,19 +1,14 @@
-const removeDuplicates = (array) => { //возвращает уникальные элементы в массиве
-  const resultObj = {};
+const removeDuplicates = (array) => {
   const resultArr = [];
 
   for (const value of array) {
-    const key = (typeof value === 'string') ? value.toLowerCase() : value;
-    isNaN(resultObj[key]) ? resultObj[key] = 1 : resultObj[key]++;
-  }
-
-  for (const key in resultObj) {
-    if (resultObj[key] === 1) {
-      resultArr.push(key)
+    const neededValue = (typeof value === 'string') ? value.toLowerCase() : value;
+    if (!resultArr.includes(neededValue)) {
+      resultArr.push(neededValue);
     }
   }
-
+  
   return resultArr;
 }
 
-console.log(removeDuplicates([true, 'education', 'part', true]));
+console.log(removeDuplicates(['true', 'education', 'part', 'True']));
