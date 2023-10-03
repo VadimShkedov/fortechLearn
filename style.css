@@ -7,7 +7,9 @@
   height: 150px;
   position: relative;
   display: flex;
-  font-size: large
+  font-size: large;
+  transition: left 2s;
+  left: 0;
 }
 
 .container__button {
@@ -45,30 +47,7 @@
   align-items: center;
 }
 
-.container__button:hover,
-.container__button {
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-.container__button:hover {
-  animation-name: button-to-block;
-}
-
-@keyframes button-to-block {
-  to {
-    width: 400px;
-  }
-}
-
-@keyframes close-container {
-  from {
-    width: 400px;
-  }
-
-  to {
-    width: 20px;
-  }
+.container:hover {
+  left: 380px;
+  transition: left 2s;
 }
