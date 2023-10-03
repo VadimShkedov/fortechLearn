@@ -7,7 +7,7 @@ const makeArray = (start, stop, step = 1) => {
         }
     }
 
-    else if (start >= stop && step < 0) {
+    if (start >= stop && step < 0) {
         for (let i = start; i >= stop; i+=step) {
             finalArray.push(i);
         }
