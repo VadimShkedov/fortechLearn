@@ -5,18 +5,19 @@ const objects = [
 ];
 
 const filtringCollection = (array, equalTo, moreThan) => {
-    let finalArray = [];
+    const finalArray = [];
 
     array.forEach((object) => {
-        const values = []
+        const tempArray = [];
         for (let key in object) {
-            values.push(object[key]);
+            tempArray.push(object[key]);
         }
         
-        if (values.includes(equalTo) && values.find(value => value > moreThan)) {
+        if (tempArray.includes(equalTo) && tempArray.find(value => value > moreThan)) {
             finalArray.push(object);
         }
-    })
+    });
+    
     return finalArray;
 }
 
