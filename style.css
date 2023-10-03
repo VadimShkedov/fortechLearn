@@ -2,10 +2,14 @@
   margin: 0;
 }
 
+body {
+  position: relative;
+}
+
 .container {
   top: 200px;
   height: 150px;
-  position: relative;
+  position: absolute;
   display: flex;
   font-size: large;
   transition: left 2s;
@@ -18,7 +22,6 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   width: 20px;
-  height: 100%;
   text-align: center;
   transform: rotate(180deg);
   animation-name: close-container;
@@ -33,7 +36,6 @@
   display: inline-block;
   transform: rotate(180deg);
   width: 400px;
-  height: 100%;
   background-color: rgb(70, 70, 70);
   animation-name: close-container;
 }
