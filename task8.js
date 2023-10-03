@@ -3,9 +3,10 @@ const deleteElements = (arrayElements, arrayIndexes) => {
     
     for (let index = 0; index < arrayElements.length; index++) {
         if (!arrayIndexes.includes(index)) {
-            finalArray.push(arrayElements[index])
+            finalArray.push(arrayElements[index]);
         }
     }
+    
     return finalArray;
 }
 
