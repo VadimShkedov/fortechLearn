@@ -1,20 +1,20 @@
 const string1 = 'testset';
 const string2 = 'abbcsa';
 
-const isPalindrome = (string) => {
+const checkWordForPalidrome = (string) => {
   const length = Math.trunc((string.length - 1) / 2);
-  let isPalindr = true;
+  let isPalidrome = true;
 
   for (let i = 0; i < length; i++) {
     if (string[i] !== string[string.length - i - 1]) {
-      isPalindr = false;
+      isPalidrome = false;
       break;
     }
   }
 
-  return isPalindr;
+  return isPalidrome;
 }
 
-console.log(isPalindrome(string1));
+console.log(checkWordForPalidrome(string1));
 
-console.log(isPalindrome(string2));
+console.log(checkWordForPalidrome(string2));
