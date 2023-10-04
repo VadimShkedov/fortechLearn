@@ -37,12 +37,7 @@ const giveFragments = (string) => {
     const fragment = [];
 
     for (let j = i; j < i + 3; j++) {
-      if (j === i + 1) { //if middle symbol
-        fragment.push(randomSymbol);
-      }
-      else {
-        fragment.push(string[j]);
-      }
+      (j === i + 1) ? fragment.push(randomSymbol) : fragment.push(string[j]);
     }
     finalArray.push(fragment.join(''));
   }
