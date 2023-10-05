@@ -20,7 +20,7 @@ const searchingSubstring = (string1, string2) => {
 
   for (let i = 0; i < maxStr.length; i++) {
     const sliceStr = maxStr.slice(i, i + minStr.length);
-    if (sliceStr == minStr) {
+    if (sliceStr === minStr) {
       isStringExist = true;
       break;
     }
