@@ -1,17 +1,17 @@
-const obj1 = { test: 8, text: 9 };
-const obj2 = { test: '8', text: 9 };
+const object1 = { test: 8, text: 9 };
+const object2 = { test: '8', text: 9 };
 
-const isObjectsEqual = (obj1, obj2) => {
-  let isEqual = true;
+const checkEqualObjects = (obj1, obj2) => {
+  let isObjectsEqual = true;
 
   for (let key in obj1) {
     if (obj1[key] !== obj2[key]) {
-      isEqual = false;
+      isObjectsEqual = false;
       break;
     }
   }
 
-  return isEqual;
+  return isObjectsEqual;
 }
 
-console.log(isObjectsEqual(obj1, obj2));
+console.log(checkEqualObjects(obj1, obj2));
