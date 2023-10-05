@@ -14,4 +14,4 @@ const checkEqualObjects = (obj1, obj2) => {
   return isObjectsEqual;
 }
 
-console.log(checkEqualObjects(obj1, obj2));
+console.log(checkEqualObjects(object1, object2));
