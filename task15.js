@@ -7,6 +7,7 @@ const isObjectsEqual = (obj1, obj2) => {
   for (let key in obj1) {
     if (obj1[key] !== obj2[key]) {
       isEqual = false;
+      break;
     }
   }
 
