@@ -1,5 +1,5 @@
 .circle {
-  background: conic-gradient(rgb(5, 173, 5) 0deg 45deg, rgb(148, 255, 148) 45deg 135deg, rgb(5, 173, 5) 135deg 360deg);
+  background: conic-gradient(#05AD05 0deg 45deg, #94FF94 45deg 135deg, #05AD05 135deg 360deg);
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -8,7 +8,7 @@
 .circle__center {
   text-align: center;
   position: relative;
-  background-color: rgb(190, 224, 207);
+  background-color: #BEE0CF;
   height: 150px;
   width: 150px;
   top: 12.5%;
