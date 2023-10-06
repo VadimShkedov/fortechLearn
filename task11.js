@@ -10,7 +10,7 @@ const sortAndSetArray = (array) => {
   
   for (let key in countNums) {
     if (countNums[key] === 1) {
-      finalArray.push(key);
+      finalArray.push(parseInt(key));
     }
   }
 
