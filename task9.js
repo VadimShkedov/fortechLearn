@@ -9,6 +9,7 @@ const filtringCollection = (array, equalTo, moreThan) => {
 
     array.forEach((object) => {
         const tempArray = [];
+        
         for (let key in object) {
             tempArray.push(object[key]);
         }
