@@ -1,16 +1,15 @@
 const getMaxMinString = (string1, string2) => {
   if (string1.length > string2.length) {
-
     return {
       maxStr: string1,
       minStr: string2
     }
-  }
+  };
 
   return {
     maxStr: string2,
     minStr: string1
-  }
+  };
 }
 
 const searchingSubstring = (string1, string2) => {
