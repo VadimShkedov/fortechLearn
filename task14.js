@@ -3,8 +3,8 @@ const getMaxMinString = (string1, string2) => {
     return {
       maxStr: string1,
       minStr: string2
-    }
-  };
+    };
+  }
 
   return {
     maxStr: string2,
