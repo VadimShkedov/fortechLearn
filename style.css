@@ -1,47 +1,44 @@
 * {
-    margin: 0;
+  margin: 0;
 }
 
 .battery {
-    width: 15vw;
-    height: 10vh;
-    margin-bottom: 1%;
-    display: -webkit-box;
+  width: 15vw;
+  height: 10vh;
+  margin-bottom: 1em;
+  display: -webkit-box;
 }
 
 .battery__body {
-    width: 15vw;
-    height: 10vh;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border: 0.5vw solid black;
-    font-size: 0
+  width: 15vw;
+  height: 10vh;
+  box-sizing: border-box;
+  border: 0.5rem solid black;
+  font-size: 0
 }
 
 .battery__plus {
-    position: relative;
-    top: 35%;
-    height: 3vh;
-    width: 0.5vw;
-    display: inline-block;
-    background-color: black;
-    display: block;
+  position: relative;
+  top: 35%;
+  height: 3vh;
+  width: 0.5vw;
+  background-color: black;
 }
 
-.battery__section {
-    display: inline-block;
-    width: 33.33333333%;
-    height: 100%;
+.battery-body__section {
+  display: inline-block;
+  width: 33%;
+  height: 100%;
 }
 
-.battery__section_red {
-    background-color: red;
-} 
-
-.battery__section_yellow {
-    background-color: yellow;
+.battery-body__section_red {
+  background-color: red;
 }
 
-.battery__section_green {
-    background-color: green;
+.battery-body__section_yellow {
+  background-color: yellow;
+}
+
+.battery-body__section_green {
+  background-color: green;
 }
