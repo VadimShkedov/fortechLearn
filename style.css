@@ -6,7 +6,7 @@
   width: 15vw;
   height: 10vh;
   margin-bottom: 1em;
-  display: -webkit-box;
+  display: flex;
 }
 
 .battery__body {
