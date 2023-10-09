@@ -1,52 +1,41 @@
-* {
-  margin: 0;
-}
-
 body {
-  position: relative;
+  margin: 0;
 }
 
 .container {
   top: 200px;
-  height: 150px;
   position: absolute;
-  display: flex;
   font-size: large;
   transition: left 2s;
   left: 0;
 }
 
 .container__button {
-  background-color: rgb(255, 233, 107);
+  background-color: #FFE96B;
   writing-mode: vertical-lr;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
   width: 20px;
   text-align: center;
   transform: rotate(180deg);
-  animation-name: close-container;
 }
 
 .container__content img {
-  padding-left: 10px;
+  height: 150px;
+  padding-left: 1em;
 }
 
 .container__content {
   color: white;
-  display: inline-block;
   transform: rotate(180deg);
   width: 400px;
-  background-color: rgb(70, 70, 70);
-  animation-name: close-container;
+  background-color: #464646;
 }
 
-.container__text-content {
-  display: flex;
-  width: 50%;
-  height: 100%;
-  text-align: center;
+.container__text {
+  margin: auto;
+  width: 200px;
   writing-mode: lr;
-  align-items: center;
 }
 
 .container:hover {
