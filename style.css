@@ -1,7 +1,3 @@
-* {
-  margin-left: 0;
-}
-
 body {
   text-align: center;
   margin: 0;
@@ -17,80 +13,69 @@ h4 {
   font-size: 1.5rem;
 }
 
-.main-section__image {
+.image {
   background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/e52fd3fef67e50928b010681/-min.jpg);
   border-radius: 50%;
   height: 850px;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
   width: 850px;
   margin: auto;
 }
 
-.main-section__widgets {
+.list {
   text-align: left;
   display: grid;
   position: relative;
   grid-template-columns: repeat(3, 300px);
-  bottom: 200px;
-  z-index: 1;
+  bottom: 100px;
   margin: auto;
   width: max-content;
 }
 
-.main-section__widget {
+.list-widget {
   background-color: white;
-  margin: 20px;
-  padding: 20px;
-  width: 200px;
+  margin: 1rem;
+  padding: 1rem;
   box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1);
-
 }
 
-.main-section__widget>p {
-  line-height: 30px;
-}
-
-.main-section__subimage {
+.list-widget__subimage {
   width: 50px;
   height: 50px;
   text-align: center;
 }
 
-.main-section__subimage_cash {
+.list-widget__subimage_cash {
   background-image: url(icons/cash.svg);
 }
 
-.main-section__subimage_home {
+.list-widget__subimage_home {
   background-image: url(icons/home.svg);
 }
 
-.main-section__subimage_garage {
+.list-widget__subimage_garage {
   background-image: url(icons/garage.svg);
 }
 
-.main-section__subimage_location {
+.list-widget__subimage_location {
   background-image: url(icons/location.svg);
 }
 
-.main-section__subimage_bed {
+.list-widget__subimage_bed {
   background-image: url(icons/bed.svg);
 }
 
-.main-section__subimage_patio {
+.list-widget__subimage_patio {
   background-image: url(icons/patio.svg);
 }
 
 footer {
-  padding: 20px;
+  padding: 2rem;
   display: flex;
   height: 200px;
   color: white;
   background-color: #333333;
   align-items: center;
-  align-content: stretch;
   justify-content: center;
 }
 
@@ -99,16 +84,12 @@ footer > p {
 }
 
 @media (max-width: 1090px) {
-  .main-section__image {
+  .image {
     width: 531px;
     height: 531px;
   }
 
-  .main-section__widgets {
-    bottom: 150px;
-  }
-
-  .main-section__widgets {
+  .list {
     grid-template-columns: repeat(2, 290px);
   }
 
@@ -118,20 +99,16 @@ footer > p {
 }
 
 @media (max-width: 630px) {
-  .main-section__image {
+  .image {
     width: 379px;
     height: 379px;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
-  .main-section__widgets {
-    bottom: 100px;
-  }
-
-  .main-section__widgets {
+  .list {
     grid-template-columns: repeat(1, 280px);
   }
 }
