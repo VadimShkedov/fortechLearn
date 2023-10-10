@@ -1,0 +1,40 @@
+.container {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  position: relative;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.container-stage {
+  padding-top: 10px;
+  margin-right: 50px;
+  width: 50px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.container-line {
+  top: 45%;
+  height: 5px;
+  width: 100%;
+  background-color: #C4C4C4;
+  position: absolute;
+}
+
+.container-stage_green {
+  background-color: #ADDD00;
+}
+
+.container-stage_burgundy {
+  background-color: #A052E9;
+}
+
+.container-stage_grey {
+  background-color: #C4C4C4;
+  color: black;
+  margin: 0;
+}
