@@ -1,0 +1,22 @@
+.circle {
+  background: conic-gradient(#05AD05 0deg 45deg, #94FF94 45deg 135deg, #05AD05 135deg 360deg);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.circle__center {
+  text-align: center;
+  position: relative;
+  background-color: #BEE0CF;
+  height: 150px;
+  width: 150px;
+  top: 12.5%;
+  left: 12.5%;
+  border-radius: 50%;
+}
+
+.circle-center__procent {
+  padding-top: 3rem;
+  font-size: 3.5rem;
+}
