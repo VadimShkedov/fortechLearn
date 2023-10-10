@@ -4,9 +4,8 @@ body {
 }
 
 .container {
-  width: 50vw;
+  width: 30vw;
   background-color: white;
-  height: max-content;
   display: flex;
   flex-wrap: wrap;
   margin: 1em;
