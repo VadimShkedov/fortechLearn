@@ -10,7 +10,12 @@ body {
   left: 0;
 }
 
-.container__button {
+.container:hover {
+  left: 380px;
+  transition: left 2s;
+}
+
+.container-button {
   background-color: #FFE96B;
   writing-mode: vertical-lr;
   border-top-left-radius: 1em;
@@ -20,25 +25,20 @@ body {
   transform: rotate(180deg);
 }
 
-.container__content img {
+.container-button-content img {
   height: 150px;
   padding-left: 1em;
 }
 
-.container__content {
+.container-button-content {
   color: white;
   transform: rotate(180deg);
   width: 400px;
   background-color: #464646;
 }
 
-.container__text {
+.container-button-content__text {
   margin: auto;
   width: 200px;
   writing-mode: lr;
-}
-
-.container:hover {
-  left: 380px;
-  transition: left 2s;
 }
