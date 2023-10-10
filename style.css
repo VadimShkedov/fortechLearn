@@ -79,7 +79,6 @@ footer>p {
 }
 
 @media (max-width: 1180px) {
-
   .main-section__image {
     height: 700px;
     width: 700px;
@@ -140,7 +139,6 @@ footer>p {
 }
 
 @media (max-width: 574px) {
-
   .main-section__image,
   .main-section-content__images>* {
     height: 350px;
