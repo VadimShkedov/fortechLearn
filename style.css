@@ -3,63 +3,68 @@ body {
   margin: 0;
 }
 
-.main-section {
+.main {
   background-image: url(images/background.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
   background-position: center;
   background-size: cover;
 }
 
-.main-section__menu {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  top: 50%;
+.main-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 2rem;
+  margin: auto;
+  width: max-content;
+  padding: 30rem 0 10rem 0;
 }
 
-.main-section__panel {
+.main-menu-panel {
   letter-spacing: 1px;
-  line-height: 1.5;
-  background-color: rgb(73, 73, 73);
+  line-height: 1rem;
+  background-color: #494949;
   color: white;
   height: 300px;
   width: 300px;
-  margin: 0 20px 20px 20px;
-  padding: 20px;
+  padding: 2rem;
 }
 
-.main-section__panel h4 {
+.main-menu-panel h4 {
   font-size: 1.3rem;
 }
 
-.main-section__panel p {
+.main-menu-panel p {
   font-size: 0.8rem;
 }
 
-.main-section__panel button {
+.main-menu-panel button {
   color: white;
   border: solid orange 2px;
-  background-color: rgb(73, 73, 73);
+  background-color: #494949;
   width: 130px;
   height: 50px;
+  margin-top: 3rem;
+  cursor: pointer;
 }
 
-.main-section__subimage {
+.main-menu-panel button:hover {
+  color: #cecece;
+}
+
+.main-menu-panel__subimage {
   width: 64px;
   height: 64px;
 }
 
-.main-section__subimage_home1 {
+.main-menu-panel__subimage_home1 {
   background-image: url(images/home.svg);
 }
 
-.main-section__subimage_manufacture {
+.main-menu-panel__subimage_manufacture {
   background-image: url(images/manufacture.svg);
 }
 
-.main-section__subimage_home2 {
+.main-menu-panel__subimage_home2 {
   background-image: url(images/home2.svg);
 }
 
@@ -69,20 +74,22 @@ footer {
   color: white;
   background-color: #333333;
   align-items: center;
-  align-content: stretch;
   justify-content: center;
-  padding: 20px;
+  padding: 2rem;
 }
 
 footer > p {
   width: 500px;
 }
 
-@media (max-width: 1135px) {
-  .main-section {
-    height: 100%;
+@media (max-width: 1290px) {
+  .main-menu {
+    grid-template-columns: repeat(2, 360px);
   }
-  .main-section__panel {
-    margin-top: 50px;
+}
+
+@media (max-width: 810px) {
+  .main-menu {
+    grid-template-columns: repeat(1, 360px);
   }
 }
