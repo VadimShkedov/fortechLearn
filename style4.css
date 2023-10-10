@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+}
+
+.columns {
+  display: flex;
+  width: 100vw;
+}
+
+.columns__column {
+  height: 300px;
+  width: 33vw;
+  margin: 1rem;
+}
+
+.columns__column:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.columns-column__date {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #046FA1;
+  height: max-content;
+}
+
+.columns-column__image {
+  height: 50%;
+}
+
+.columns-column__image * {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.columns-column__temp {
+  text-align: center;
+  font-size: 2rem;
+  height: max-content;
+}
+
+.columns-column-image__cloudy {
+  background-image: url(images/cloudy.jpg);
+}
+
+.columns-column-image_snowfall {
+  background-image: url(images/snowfall.jpg);
+}
+
+.columns-column-image_windy {
+  background-image: url(images/windy.jpg);
+}
+
