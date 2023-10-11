@@ -22,10 +22,8 @@ body {
 .main-menu-panel {
   letter-spacing: 1px;
   line-height: 1rem;
-  background-color: #494949;
-  color: white;
-  height: 300px;
-  width: 300px;
+  background-color: #292d33;
+  color: rgb(255, 255, 255);
   padding: 2rem;
 }
 
@@ -34,16 +32,15 @@ body {
 }
 
 .main-menu-panel p {
-  font-size: 0.8rem;
+  line-height: 1.3rem;
 }
 
 .main-menu-panel button {
   color: white;
   border: solid orange 2px;
-  background-color: #494949;
+  background-color: #292d33;
   width: 130px;
   height: 50px;
-  margin-top: 3rem;
   cursor: pointer;
 }
 
@@ -56,23 +53,24 @@ body {
   height: 64px;
 }
 
-.main-menu-panel__subimage_home1 {
-  background-image: url(images/home.svg);
+.main-menu-panel__subimage_build {
+  background-image: url(images/build.svg);
 }
 
 .main-menu-panel__subimage_manufacture {
   background-image: url(images/manufacture.svg);
 }
 
-.main-menu-panel__subimage_home2 {
-  background-image: url(images/home2.svg);
+.main-menu-panel__subimage_future {
+  background-image: url(images/future.svg);
 }
 
 footer {
   display: flex;
   height: 200px;
-  color: white;
+  color: rgb(255, 255, 255);
   background-color: #333333;
+  text-align: center;
   align-items: center;
   justify-content: center;
   padding: 2rem;
